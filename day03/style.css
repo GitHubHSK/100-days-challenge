@@ -19,6 +19,8 @@ a:hover {
   text-decoration: underline;
 }
 
-#todays-challenge {
+#todays-challenge { /* id selector */
     color: rgb(179, 96, 83);
+    font-weight: bold;
+    font-size: 52px;
 }
