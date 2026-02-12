@@ -3,10 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/styles.css" />
     <title>Tic Tac Toe</title>
   </head>
   <body>
-    <header>
+    <header id="main-header">
       <h1>Play Tic, Tac, Toe</h1>
       <p>Built with HTML, CSS, JavaScript and - of course - lots of love!</p>
     </header>
@@ -19,8 +20,8 @@
             <input type="text" name="playname" id="playname" />
           </div>
           <div>
-            <button type="button">Cancel</button>
-            <button type="submit">Confirm</button>
+            <button type="button" class="btn btn-alt">Cancel</button>
+            <button type="submit" class="btn">Confirm</button>
           </div>
         </form>
       </aside>
@@ -31,7 +32,7 @@
               <h2>Player 1</h2>
               <h3>PLAYER NAME</h3>
               <p>O</p>
-              <button>Edit</button>
+              <button class="btn btn-alt">Edit</button>
             </article>
           </li>
           <li>
@@ -39,7 +40,7 @@
               <h2>Player 2</h2>
               <h3>PLAYER NAME</h3>
               <p>X</p>
-              <button>Edit</button>
+              <button class="btn btn-alt">Edit</button>
             </article>
           </li>
         </ol>
@@ -47,22 +48,22 @@
       </section>
       <section id="active-game">
         <article>
-            <h3>You won, <span id="winner-name">PLAYER NAME</span>!</h3>
-            <p>Click "Start New Game" above, to start a new game!</p>
+          <h3>You won, <span id="winner-name">PLAYER NAME</span>!</h3>
+          <p>Click "Start New Game" above, to start a new game!</p>
         </article>
         <p>It's your turn <span id="active-player-name">PLAYER NAME</span>!</p>
         <ol>
-            <li></li>
-            <li></li>
-            <li></li>
-            
-            <li></li>
-            <li></li>
-            <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
 
-            <li></li>
-            <li></li>
-            <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+
+          <li></li>
+          <li></li>
+          <li></li>
         </ol>
       </section>
     </main>
