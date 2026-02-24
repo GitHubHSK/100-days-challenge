@@ -20,7 +20,7 @@ app.get("/", function (req, res) {
 app.post("/store-user", function (req, res) {
   const userName = req.body.username;
 
-  const filePaht = path.join(__dirname, 'data', 'users.json');
+  const filePaht = path.join(__dirname, "data", "users.json");
   const fileData = fs.readFileSync(filePaht);
   const existingUsers = JSON.parse(fileData);
 
@@ -29,6 +29,22 @@ app.post("/store-user", function (req, res) {
   fs.writeFileSync(filePaht, JSON.stringify(existingUsers));
 
   res.send("<h1>Username Stored!</h1>");
+});
+
+app.get("/users", function (req, res) {
+  const filePaht = path.join(__dirname, "data", "users.json");
+  const fileData = fs.readFileSync(filePaht);
+  const existingUsers = JSON.parse(fileData);
+
+  let responseData = "<ul>";
+
+  for (const user of existingUsers) {
+    responseData += "<li>" + user + "</li>";
+  }
+
+  responseData += "</ul>";
+
+  res.send(responseData);
 });
 
 app.listen(3000);
